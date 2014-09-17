@@ -15,31 +15,29 @@
 		<h1><strong>Stepmania Registration - Software Freedom Day</strong></h1>
 		<div class="row">
 			<div class="col-md-12">
-				<form id="regform" role="form">
+				<form id="regform" name="regform" role="form">
 					<div class="form-group">
 						<label for="fname">First Name</label>
-						<input type="email" class="form-control" id="fname" placeholder="Enter first name" onblur="validateNonEmpty(this, document.getElementById('fname_help'))" />
+						<input type="text" class="form-control" id="fname" name="fname" placeholder="Enter first name" onblur="validateNonEmpty(this, document.getElementById('fname_help'))" />
 						<span id="fname_help" class="text-danger"></span>
 					</div>
 					<div class="form-group">
 						<label for="lname">Last Name</label>
-						<input type="email" class="form-control" id="lname" placeholder="Enter last name" onblur="validateNonEmpty(this, document.getElementById('lname_help'))" />
+						<input type="text" class="form-control" id="lname" name="lname" placeholder="Enter last name" onblur="validateNonEmpty(this, document.getElementById('lname_help'))" />
 						<span id="lname_help" class="text-danger"></span>
 					</div>
 					<div class="form-group">
-						<label for="fname">Mobile Number</label>
-						<input type="email" class="form-control" id="mobilenumber" placeholder="Enter mobile number (e.g. 09123456789)" onblur="validateMobileNum(this, document.getElementById('mobile_help'))" />
+						<label for="mobilenumber">Mobile Number</label>
+						<input type="text" class="form-control" id="mobilenumber" name="mobilenumber" placeholder="Enter mobile number (e.g. 09123456789)" onblur="validateMobileNum(this, document.getElementById('mobile_help'))" />
 						<span id="mobile_help" class="text-danger"></span>
 					</div>
-					<button class="btn btn-primary" id="register">Register</button>
+					<button class="btn btn-primary" id="register" onclick="registerPlayer(this.form)">Register</button>
 				</form>
 			</div>
 		</div>
 	</div>
 	
 	<script src="js/bootstrap.js"></script>
-	<script src="js/bootstrapValidator.js"></script>
-	
 	<script src="js/initializer.js"></script>
 </body>
 </html>

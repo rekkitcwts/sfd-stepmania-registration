@@ -88,6 +88,17 @@ function validateNonEmpty(inputField, helpText) {
           "Please enter a phone number (for example, 09123456789).");
     }
 
+    function registerPlayer(form) {
+        if (validateNonEmpty(form["fname"], form["fname_help"]) &&
+          validateNonEmpty(form["lname"], form["lname_help"]) &&
+          validateMobileNum(form["mobilenumber"], form["mobile_help"])) {
+          // Submit the order to the server
+          alert("AJAX Calls go here");
+        } else {
+          alert("All fields are required.");
+        }
+      }
+
     function register()
     {
         var fname = $('#fname').val();
