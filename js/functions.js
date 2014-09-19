@@ -6,8 +6,9 @@ function register()
 	var fname = $('#fname').val();
 	var lname = $('#lname').val();
 	var mobilenum = $('#mobilenumber').val();
+	var mobileRegex = /^0\d{10}$/;
 
-	if (fname != "" && lname != "" && mobilenum != "") 
+	if (fname != "" && lname != "" && mobilenum != "" && mobileRegex.test(mobilenum)) 
 	{
 
 		$.ajax({
@@ -43,6 +44,15 @@ function register()
 				$('#message').html('OOPS');
 			}
 		});
+	}
+	else if (!mobileRegex.test(mobilenum))
+	{
+		if ($('#message').hasClass('alert alert-success') || $('#message').hasClass('alert alert-danger'))
+		{
+			$('#message').removeClass();
+		}
+		$('#message').addClass('alert alert-danger');
+		$('#message').html('Please enter a valid mobile number, e.g. 09123456789');
 	}
 	else
 	{
