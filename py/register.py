@@ -10,6 +10,6 @@ def index(req, fname, lname, mobile):
     mobileNum = cgi.escape(mobile)
 
     x = doSql()
-    x.execqry("INSERT INTO participants (lname, fname, mobile) VALUES (\'"+ lname +"\', \'"+ fname +"\', \'"+ mobile +"\')", False)
+    x.insert("INSERT INTO participants (lname, fname, mobile) VALUES (%s, %s, %s)", (lastName, firstName, mobileNum))
 
     return "AUSTRALIA"

@@ -32,6 +32,19 @@ class doSql(object):
             #errmsg = sys.exc_type + ":" + sys.exc_value 
             errmsg =  str(sys.exc_info()[1])
             rows.append([errmsg])
+        return rows
+
+    def insert(self, sql, values):
+        rows = []
+
+        try:
+            self._cur.execute(sql, values)
+            self._cxn.commit()
+            rows.append(['Insert OK!'])
+        except:
+            #errmsg = sys.exc_type + ":" + sys.exc_value 
+            errmsg =  str(sys.exc_info()[1])
+            rows.append([errmsg])
         return rows    
 
     
