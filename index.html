@@ -6,8 +6,6 @@
 	<link rel="stylesheet" href="css/bootstrap.css" />
 	<link rel="stylesheet" href="css/stepmania-reg.css" />
 
-	<script src="js/jquery-1.10.2.js"></script>
-	<script src="js/functions.js"></script>
 </head>
 
 <body>
@@ -18,26 +16,29 @@
 				<form id="regform" name="regform" role="form">
 					<div class="form-group">
 						<label for="fname">First Name</label>
-						<input type="text" class="form-control" id="fname" name="fname" placeholder="Enter first name" onblur="validateNonEmpty(this, document.getElementById('fname_help'))" />
+						<input type="text" class="form-control" id="fname" name="fname" placeholder="Enter first name" />
 						<span id="fname_help" class="text-danger"></span>
 					</div>
 					<div class="form-group">
 						<label for="lname">Last Name</label>
-						<input type="text" class="form-control" id="lname" name="lname" placeholder="Enter last name" onblur="validateNonEmpty(this, document.getElementById('lname_help'))" />
+						<input type="text" class="form-control" id="lname" name="lname" placeholder="Enter last name" />
 						<span id="lname_help" class="text-danger"></span>
 					</div>
 					<div class="form-group">
 						<label for="mobilenumber">Mobile Number</label>
-						<input type="text" class="form-control" id="mobilenumber" name="mobilenumber" placeholder="Enter mobile number (e.g. 09123456789)" onblur="validateMobileNum(this, document.getElementById('mobile_help'))" />
+						<input type="text" class="form-control" id="mobilenumber" name="mobilenumber" placeholder="Enter mobile number (e.g. 09123456789)" />
 						<span id="mobile_help" class="text-danger"></span>
 					</div>
-					<button class="btn btn-primary" id="register" onclick="registerPlayer(this.form)">Register</button>
 				</form>
+
+				<button class="btn btn-primary" id="register">Register</button>
 			</div>
 		</div>
 	</div>
 	
+	<script src="js/jquery-1.10.2.js"></script>
 	<script src="js/bootstrap.js"></script>
+	<script src="js/functions.js"></script>
 	<script src="js/initializer.js"></script>
 </body>
 </html>
