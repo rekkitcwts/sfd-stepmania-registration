@@ -13,6 +13,7 @@
 		<h1><strong>Stepmania Registration - Software Freedom Day</strong></h1>
 		<div class="row">
 			<div class="col-md-12">
+<!--			<div class="col-md-12">
 				<form id="regform" name="regform" role="form">
 					<div class="form-group">
 						<label for="fname">First Name</label>
@@ -32,13 +33,49 @@
 				</form>
 
 				<button class="btn btn-primary" id="register">Register</button>
+			</div> -->
+
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs" role="tablist">
+				<li class="active"><a href="#registration" role="tab" data-toggle="tab">Register</a></li>
+				<li><a href="#participants" role="tab" data-toggle="tab">Participants</a></li>
+
+			</ul>
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div class="tab-pane active" id="registration">
+
+					<form id="regform" name="regform" role="form">
+						<div class="form-group">
+							<label for="fname">First Name</label>
+							<input type="text" class="form-control" id="fname" name="fname" placeholder="Enter first name" />
+							<span id="fname_help" class="text-danger"></span>
+						</div>
+						<div class="form-group">
+							<label for="lname">Last Name</label>
+							<input type="text" class="form-control" id="lname" name="lname" placeholder="Enter last name" />
+							<span id="lname_help" class="text-danger"></span>
+						</div>
+						<div class="form-group">
+							<label for="mobilenumber">Mobile Number</label>
+							<input type="text" class="form-control" id="mobilenumber" name="mobilenumber" placeholder="Enter mobile number (e.g. 09123456789)" />
+							<span id="mobile_help" class="text-danger"></span>
+						</div>
+					</form>
+
+					<button class="btn btn-primary" id="register">Register</button>
+					
+				</div>
+				<div class="tab-pane" id="participants">...</div>
 			</div>
 		</div>
 	</div>
-	
-	<script src="js/jquery-1.10.2.js"></script>
-	<script src="js/bootstrap.js"></script>
-	<script src="js/functions.js"></script>
-	<script src="js/initializer.js"></script>
+</div>
+
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/functions.js"></script>
+<script src="js/initializer.js"></script>
 </body>
 </html>
