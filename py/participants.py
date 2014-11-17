@@ -2,7 +2,11 @@
 
 from dosql import *
 import cgi
-import json
+
+try:
+	import json
+except ImportError:
+	import simplejson as json
 
 def index(req):
     x = doSql()
